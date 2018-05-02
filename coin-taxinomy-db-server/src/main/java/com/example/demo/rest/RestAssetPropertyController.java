@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Asset;
 import com.example.demo.model.AssetProperty;
 import com.example.demo.service.AssetPropertyService;
-import com.example.demo.service.KeywordAssetArticleService;
 
 
 
@@ -57,7 +55,7 @@ public class RestAssetPropertyController {
 	
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void insertAssetProperty(@RequestBody AssetProperty AssetProperty, HttpServletResponse response) {
-		assetPropertyService.insertAsset(AssetProperty);
+		assetPropertyService.insertAssetProperty(AssetProperty);
 		try {
 			response.sendRedirect("/");
 		} catch (IOException e) {

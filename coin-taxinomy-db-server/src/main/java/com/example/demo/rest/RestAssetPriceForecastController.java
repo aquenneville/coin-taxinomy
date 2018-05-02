@@ -50,12 +50,12 @@ public class RestAssetPriceForecastController {
 	
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void updateAssetPriceForecast(@RequestBody AssetPriceForecast assetPriceForecast) {
-		assetPriceForecastService.updateAssetPriceForecast(asassetPriceForecastset);
+		assetPriceForecastService.updateAssetPriceForecast(assetPriceForecast);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void insertAssetPriceForecast(@RequestBody AssetPriceForecast assetPriceForecast, HttpServletResponse response) {
-		assetPriceForecastService.insertAsset(assetPriceForecast);
+		assetPriceForecastService.insertAssetPriceForecast(assetPriceForecast);
 		try {
 			response.sendRedirect("/");
 		} catch (IOException e) {
