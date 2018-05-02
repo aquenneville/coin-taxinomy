@@ -19,7 +19,7 @@ import com.example.demo.service.AssetPartnershipService;
 
 
 @RestController
-@RequestMapping("/asset-partnerships")
+@RequestMapping("/api/asset-partnerships")
 public class RestAssetPartnershipController {
 	
 	@Autowired

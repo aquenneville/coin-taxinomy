@@ -14,31 +14,32 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Asset;
+import com.example.demo.model.KeywordAssetArticle;
 import com.example.demo.service.KeywordAssetArticleService;
 
 
 
 @RestController
-@RequestMapping("/assets")
+@RequestMapping("/api/assets")
 public class RestArticleController {
 	
 	@Autowired
-	private KeywordAssetArticleService assetService;
+	private KeywordAssetArticleService keywordAssetArticleService;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public Collection<Asset> getAllAssets() {		
+	public Collection<KeywordAssetArticle> getAllKeywordAssetArticles() {		
 		
-		return assetService.getAllAssets();
+		return keywordAssetArticleService.getAllKeywordAssetArticles();
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET) 
-	public Asset getAssetById(@PathVariable("id")int id) {		 
-		return assetService.getAssetById(id);
+	public KeywordAssetArticle getAssetById(@PathVariable("id")int id) {		 
+		return keywordAssetArticleService.getKeywordAssetArticleById(id);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE) 
 	public void deleteAssetById(@PathVariable("id") int id, HttpServletResponse response) {
-		assetService.deleteAssetById(id);		
+		keywordAssetArticleService.deleteKeywordAssetArticleById(id);		
 		//return "redirect:/";
 		try {
 			response.sendRedirect("/");
@@ -49,13 +50,13 @@ public class RestArticleController {
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void updateAsset(@RequestBody Asset asset) {
-		assetService.updateAsset(asset);
+	public void updateAsset(@RequestBody KeywordAssetArticle keywordAssetArticle) {
+		keywordAssetArticleService.updateKeywordAssetArticle(keywordAssetArticle);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void insertAsset(@RequestBody Asset asset, HttpServletResponse response) {
-		assetService.insertAsset(asset);
+	public void insertAsset(@RequestBody KeywordAssetArticle keywordAssetArticle, HttpServletResponse response) {
+		keywordAssetArticleService.insertKeywordAssetArticle(keywordAssetArticle);
 		try {
 			response.sendRedirect("/");
 		} catch (IOException e) {

@@ -13,15 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Asset;
 import com.example.demo.model.AssetFork;
 import com.example.demo.service.AssetForkService;
-import com.example.demo.service.KeywordAssetArticleService;
 
 
 
 @RestController
-@RequestMapping("/asset-forks")
+@RequestMapping("/api/asset-forks")
 public class RestAssetForkController {
 	
 	@Autowired

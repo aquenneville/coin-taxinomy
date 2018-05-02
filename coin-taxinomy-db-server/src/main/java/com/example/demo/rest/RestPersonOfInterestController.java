@@ -19,7 +19,7 @@ import com.example.demo.service.PersonOfInterestService;
 
 
 @RestController
-@RequestMapping("/persons")
+@RequestMapping("/api/persons")
 public class RestPersonOfInterestController {
 	
 	@Autowired

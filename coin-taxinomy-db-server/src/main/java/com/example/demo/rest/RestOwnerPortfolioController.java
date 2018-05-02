@@ -13,15 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Asset;
 import com.example.demo.model.OwnerPortfolio;
-import com.example.demo.service.KeywordAssetArticleService;
 import com.example.demo.service.OwnerPortfolioService;
 
 
 
 @RestController
-@RequestMapping("/portfolios")
+@RequestMapping("/api/portfolios")
 public class RestOwnerPortfolioController {
 	
 	@Autowired

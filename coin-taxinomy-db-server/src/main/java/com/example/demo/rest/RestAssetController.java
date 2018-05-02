@@ -15,12 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Asset;
 import com.example.demo.service.AssetService;
-import com.example.demo.service.KeywordAssetArticleService;
 
 
 
 @RestController
-@RequestMapping("/assets")
+@RequestMapping("/api/assets")
 public class RestAssetController {
 	
 	@Autowired

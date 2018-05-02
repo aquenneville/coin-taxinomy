@@ -13,15 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Asset;
 import com.example.demo.model.Company;
 import com.example.demo.service.CompanyService;
-import com.example.demo.service.KeywordAssetArticleService;
 
 
 
 @RestController
-@RequestMapping("/companys")
+@RequestMapping("/api/companys")
 public class RestCompanyController {
 	
 	@Autowired

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.service.KeywordAssetArticle;
+import com.example.demo.model.KeywordAssetArticle;
 import com.example.demo.service.KeywordAssetArticleService;
 
 

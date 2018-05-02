@@ -19,7 +19,7 @@ import com.example.demo.service.AssetPriceForecastService;
 
 
 @RestController
-@RequestMapping("/assets")
+@RequestMapping("/api/assets")
 public class RestAssetPriceForecastController {
 	
 	@Autowired

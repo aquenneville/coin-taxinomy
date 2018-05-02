@@ -19,7 +19,7 @@ import com.example.demo.service.OwnerPortfolioAssetService;
 
 
 @RestController
-@RequestMapping("/portfolio-assets")
+@RequestMapping("/api/portfolio-assets")
 public class RestOwnerPortfolioAssetController {
 	
 	@Autowired

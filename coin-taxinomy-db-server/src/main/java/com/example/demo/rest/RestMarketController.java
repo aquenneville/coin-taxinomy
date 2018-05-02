@@ -14,31 +14,33 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Asset;
+import com.example.demo.model.Market;
 import com.example.demo.service.KeywordAssetArticleService;
+import com.example.demo.service.MarketService;
 
 
 
 @RestController
-@RequestMapping("/assets")
+@RequestMapping("/api/markets")
 public class RestMarketController {
 	
 	@Autowired
-	private MarketService assetService;
+	private MarketService marketService;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public Collection<Asset> getAllAssets() {		
+	public Collection<Market> getAllMarkets() {		
 		
-		return assetService.getAllAssets();
+		return marketService.getAllMarkets();
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET) 
-	public Asset getAssetById(@PathVariable("id")int id) {		 
-		return assetService.getAssetById(id);
+	public Market getMarketById(@PathVariable("id")int id) {		 
+		return marketService.getMarketById(id);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE) 
-	public void deleteAssetById(@PathVariable("id") int id, HttpServletResponse response) {
-		assetService.deleteAssetById(id);		
+	public void deleteMarketById(@PathVariable("id") int id, HttpServletResponse response) {
+		marketService.deleteMarketById(id);		
 		//return "redirect:/";
 		try {
 			response.sendRedirect("/");
@@ -49,13 +51,13 @@ public class RestMarketController {
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void updateAsset(@RequestBody Asset asset) {
-		assetService.updateAsset(asset);
+	public void updateMarket(@RequestBody Market market) {
+		marketService.updateMarket(market);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void insertAsset(@RequestBody Asset asset, HttpServletResponse response) {
-		assetService.insertAsset(asset);
+	public void insertMarket(@RequestBody Market market, HttpServletResponse response) {
+		marketService.insertMarket(market);
 		try {
 			response.sendRedirect("/");
 		} catch (IOException e) {

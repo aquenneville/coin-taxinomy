@@ -21,7 +21,7 @@ import com.example.demo.service.KeywordAssetArticleService;
 
 
 @RestController
-@RequestMapping("/asset-propertys")
+@RequestMapping("/api/asset-propertys")
 public class RestAssetPropertyController {
 	
 	@Autowired

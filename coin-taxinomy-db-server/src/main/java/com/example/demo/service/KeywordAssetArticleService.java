@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.model.Asset;
+import com.example.demo.model.KeywordAssetArticle;
 import com.example.demo.persistence.AssetMapper;
 import com.example.demo.persistence.KeywordAssetArticleMapper;
 

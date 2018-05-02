@@ -19,7 +19,7 @@ import com.example.demo.service.WebsiteIdentifierService;
 
 
 @RestController
-@RequestMapping("/websiteIdentifiers")
+@RequestMapping("/api/websiteIdentifiers")
 public class RestWebsiteIdentifierController {
 	
 	@Autowired
