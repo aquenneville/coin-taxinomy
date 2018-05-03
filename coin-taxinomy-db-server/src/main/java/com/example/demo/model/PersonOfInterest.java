@@ -7,6 +7,7 @@ public class PersonOfInterest {
 	private String twitter;
 	private String website;
 	private Company company;
+	
 	public long getId() {
 		return id;
 	}

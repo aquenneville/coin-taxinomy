@@ -3,10 +3,12 @@ package com.example.demo.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.example.demo.model.AssetPartnership;
 import com.example.demo.persistence.AssetPartnershipMapper;
 
+@Component
 public class AssetPartnershipService {
 		
 	@Autowired

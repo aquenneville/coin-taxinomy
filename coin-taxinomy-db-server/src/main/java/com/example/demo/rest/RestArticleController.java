@@ -13,33 +13,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Asset;
-import com.example.demo.model.KeywordAssetArticle;
-import com.example.demo.service.KeywordAssetArticleService;
+import com.example.demo.model.Article;
+import com.example.demo.service.ArticleService;
 
 
 
 @RestController
-@RequestMapping("/api/assets")
+@RequestMapping("/api/articles")
 public class RestArticleController {
 	
 	@Autowired
-	private KeywordAssetArticleService keywordAssetArticleService;
+	private ArticleService articleService;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public Collection<KeywordAssetArticle> getAllKeywordAssetArticles() {		
+	public Collection<Article> getAllKeywordAssetArticles() {		
 		
-		return keywordAssetArticleService.getAllKeywordAssetArticles();
+		return articleService.getAllArticles();
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET) 
-	public KeywordAssetArticle getAssetById(@PathVariable("id")int id) {		 
-		return keywordAssetArticleService.getKeywordAssetArticleById(id);
+	public Article getAssetById(@PathVariable("id")int id) {		 
+		return articleService.getArticleById(id);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE) 
 	public void deleteAssetById(@PathVariable("id") int id, HttpServletResponse response) {
-		keywordAssetArticleService.deleteKeywordAssetArticleById(id);		
+		articleService.deleteArticleById(id);		
 		//return "redirect:/";
 		try {
 			response.sendRedirect("/");
@@ -50,13 +49,13 @@ public class RestArticleController {
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void updateAsset(@RequestBody KeywordAssetArticle keywordAssetArticle) {
-		keywordAssetArticleService.updateKeywordAssetArticle(keywordAssetArticle);
+	public void updateAsset(@RequestBody Article article) {
+		articleService.updateArticle(article);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public void insertAsset(@RequestBody KeywordAssetArticle keywordAssetArticle, HttpServletResponse response) {
-		keywordAssetArticleService.insertKeywordAssetArticle(keywordAssetArticle);
+	public void insertAsset(@RequestBody Article article, HttpServletResponse response) {
+		articleService.insertArticle(article);
 		try {
 			response.sendRedirect("/");
 		} catch (IOException e) {

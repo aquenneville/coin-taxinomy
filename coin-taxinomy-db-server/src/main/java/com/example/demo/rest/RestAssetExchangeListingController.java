@@ -19,7 +19,7 @@ import com.example.demo.service.AssetExchangeListingService;
 
 
 @RestController
-@RequestMapping("/api/assets")
+@RequestMapping("/api/asset-exchange-listings")
 public class RestAssetExchangeListingController {
 	
 	@Autowired

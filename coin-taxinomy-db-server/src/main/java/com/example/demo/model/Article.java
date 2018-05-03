@@ -1,6 +1,5 @@
 package com.example.demo.model;
 
-import java.nio.file.Path;
 import java.time.LocalDate;
 
 public class Article {
@@ -9,7 +8,7 @@ public class Article {
 	private String title;
 	private LocalDate articleDate;
 	private String url;
-	private Path path;
+	private String path;
 	private String summary;
 	public long getId() {
 		return id;
@@ -35,10 +34,10 @@ public class Article {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public Path getPath() {
+	public String getPath() {
 		return path;
 	}
-	public void setPath(Path path) {
+	public void setPath(String path) {
 		this.path = path;
 	}
 	public String getSummary() {

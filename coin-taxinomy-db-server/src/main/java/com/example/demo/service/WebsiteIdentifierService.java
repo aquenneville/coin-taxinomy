@@ -3,12 +3,12 @@ package com.example.demo.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import com.example.demo.model.Company;
 import com.example.demo.model.WebsiteIdentifier;
-import com.example.demo.persistence.CompanyMapper;
 import com.example.demo.persistence.WebsiteIdentifierMapper;
 
+@Component
 public class WebsiteIdentifierService {
 	
 		

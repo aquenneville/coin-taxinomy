@@ -3,10 +3,12 @@ package com.example.demo.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.example.demo.model.AssetFork;
 import com.example.demo.persistence.AssetForkMapper;
 
+@Component
 public class AssetForkService {
 		
 	@Autowired

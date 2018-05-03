@@ -19,7 +19,7 @@ import com.example.demo.service.AssetPropertyService;
 
 
 @RestController
-@RequestMapping("/api/asset-propertys")
+@RequestMapping("/api/asset-properties")
 public class RestAssetPropertyController {
 	
 	@Autowired

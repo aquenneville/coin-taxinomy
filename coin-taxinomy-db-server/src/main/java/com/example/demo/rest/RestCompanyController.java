@@ -19,7 +19,7 @@ import com.example.demo.service.CompanyService;
 
 
 @RestController
-@RequestMapping("/api/companys")
+@RequestMapping("/api/companies")
 public class RestCompanyController {
 	
 	@Autowired
